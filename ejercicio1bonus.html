@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Palindromo</title>
+  </head>
+  <body>
+    <p>¡Hola! Te ayudaremos a saber si tu palabra es palindroma o no lo es</p>
+    <label for="palabra">Escribre algo:</label>
+    <input type="text" id="palabra">
+    <p id="resultado"></p>
+    <button onclick="verificarPalindromo()">Validar</button>
+    
+    <script>
+        function verificarPalindromo(){
+            const palabra = document.querySelector('#palabra').value;
+            const resultado = document.querySelector('#resultado');
+            const palabraInvertida = palabra.split('').reverse().join('');
+            if (palabra === palabraInvertida) {
+                resultado.textContent = "La palabra es palíndroma";
+            } else {
+                resultado.textContent = "La palabra no es palíndroma";
+            }
+        }
+    </script>
+  </body>
+</html>

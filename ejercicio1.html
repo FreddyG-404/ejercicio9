@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mayúsculas</title>
+  </head>
+  <body>
+    <p>
+      ¡Hola! Te ayudaremos a convertir tu texto a mayúsculas </p>
+    <label for="texto">Escribe algo:</label>
+    <input type="text" id="texto">
+    <p id="resultado"></p>
+    <button class="btn" onclick="convertir()">Convertir mensaje a mayúsculas</button>
+    
+    <script>
+        function convertir(){
+            const input = document.querySelector('#texto');
+            const resultado = document.querySelector('#resultado');
+            const texto = input.value.toUpperCase();
+            resultado.textContent = texto;
+        }
+    </script>
+  </body>
+</html> 
